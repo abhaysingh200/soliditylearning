@@ -1,0 +1,90 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "no1",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "no2",
+						"type": "uint256"
+					}
+				],
+				"name": "checkoverflow",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "get",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "result",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/assert.sol": "assertuse"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/assert.sol": {
+			"keccak256": "0x0a3aff97a8d350f159b614c532f98cac13c739abdd456a389f76422eca52ab41",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8d53fcda945fb062bef0bbef87269bf36a47c5f87c97810579612302888411b3",
+				"dweb:/ipfs/QmS55EcWp4h9XPU7rhsrvtG9fHhKqaMcGSiM6buorxaUZB"
+			]
+		}
+	},
+	"version": 1
+}
