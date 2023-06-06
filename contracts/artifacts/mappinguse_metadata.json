@@ -6,65 +6,14 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"stateMutability": "nonpayable",
-				"type": "constructor"
-			},
-			{
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "newaddress",
+						"name": "_add",
 						"type": "address"
 					}
 				],
-				"name": "changeonwer",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "i",
-						"type": "uint256"
-					}
-				],
-				"name": "decrement",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "locked",
-				"outputs": [
-					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "owner",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "x",
+				"name": "get",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -73,6 +22,56 @@
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "mymap",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_add",
+						"type": "address"
+					}
+				],
+				"name": "remove",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_add",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_no",
+						"type": "uint256"
+					}
+				],
+				"name": "set",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			}
 		],
@@ -89,7 +88,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/modifiers.sol": "modifieruses"
+			"contracts/mapping.sol": "mappinguse"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -103,12 +102,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/modifiers.sol": {
-			"keccak256": "0x96fb79712e2b0566ffeb123c3c7572c08acbb22dc548366f4b9e1cc5cf9f9ca1",
+		"contracts/mapping.sol": {
+			"keccak256": "0x083e5b730793afd7e9ec47a8623ce513a463260bfac342f51390d5a6c4504ec9",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://03bcb81bc87ee10810132aa58688113e96c6e96884fd35383e3e55be72834afa",
-				"dweb:/ipfs/QmceaonXhYsAZeDZThAiiGxvt57NLJEsfLsJBdCffEqjbX"
+				"bzz-raw://15025372941820bc8a07fb178f532e9a3a5567aeabd9cdd3d1939eed15f49fdf",
+				"dweb:/ipfs/QmaxReUv7KnKccvScMSZgA7ukRzfH3ubJCjDJGLbc1et3h"
 			]
 		}
 	},
