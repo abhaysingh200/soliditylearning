@@ -4,21 +4,7 @@
 	},
 	"language": "Solidity",
 	"output": {
-		"abi": [
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "aman",
-						"type": "uint256"
-					}
-				],
-				"name": "test",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			}
-		],
+		"abi": [],
 		"devdoc": {
 			"kind": "dev",
 			"methods": {},
@@ -32,7 +18,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/sdss.sol": "abhay"
+			"contracts/test.sol": "abhay"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -46,12 +32,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/sdss.sol": {
-			"keccak256": "0x5961fdd15e52e25eddc5fe078e938d9b55a46a1fec89db068077dac9496be928",
+		"contracts/test.sol": {
+			"keccak256": "0x09162f48d5d4651b7c046da18b68cb0fb48a82396f870e0b33a25246a0a9e1dd",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://78dd262d5ead05ad7d42f413c44600893236d31e65df7a0918bf02d7a24ab891",
-				"dweb:/ipfs/QmV5UP8T4osaSDkzFNzKVd9F8njbytphdffi3aL51xh5rK"
+				"bzz-raw://240b4914a026e015d35c19cce32e39818dffe75d4e0f9ba149801f7e895aeaf6",
+				"dweb:/ipfs/QmXTLcF1hjL54GjcP34DSYPnTR922TxWpvU3H6Bmphsqik"
 			]
 		}
 	},

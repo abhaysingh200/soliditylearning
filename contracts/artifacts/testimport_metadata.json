@@ -1,0 +1,53 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/test.sol": "testimport"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/import enum.sol": {
+			"keccak256": "0x14863cd61b0cc84a4fdf06b7bfd18678e3d264f3f89cb78aee1d197f65450330",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://97004f99c5e98eb3a0520361728476706f5c4e31da716b55c52de5e03dbd92e5",
+				"dweb:/ipfs/QmSRu4Ta2wFUX8GdpEAqpw156S4KHcZJfxFWZs1q78YKyw"
+			]
+		},
+		"contracts/test.sol": {
+			"keccak256": "0x065891b52e2753cd0997a5e9b6c096dc5b59b23a5852ae79f7f02458f557b787",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://74b3d19e8dc2d9acd35d8d02b7c6da6935b887841b78b6b3d717d419f7a8978f",
+				"dweb:/ipfs/QmZmN7N9sgtwHeQyMfGvQcoDxkXcbn1HunHLdwjKn1BkpG"
+			]
+		}
+	},
+	"version": 1
+}

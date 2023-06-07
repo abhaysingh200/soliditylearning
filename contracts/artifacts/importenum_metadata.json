@@ -1,0 +1,59 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "maan",
+				"outputs": [
+					{
+						"internalType": "enum importenum.status",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/import enum.sol": "importenum"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/import enum.sol": {
+			"keccak256": "0x4a8a0a49fc9ad496e55f6e72e3449c8ae437d8229af30b6f07afe3a4321136de",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://73573927e3a22aa4c633ab636cc30b44423435cee2df52b8b4b003cefcd47a84",
+				"dweb:/ipfs/QmeNZUQBLJfSVgCqwEGBHA5CvZ4y9qofZGjquS6rvZy9Ki"
+			]
+		}
+	},
+	"version": 1
+}
