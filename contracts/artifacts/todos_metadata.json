@@ -1,0 +1,138 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_text",
+						"type": "string"
+					}
+				],
+				"name": "create",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_index",
+						"type": "uint256"
+					}
+				],
+				"name": "get",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "text",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "completed",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "struct1",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "text",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "completed",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_index",
+						"type": "uint256"
+					}
+				],
+				"name": "togglecompleted",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_index",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_text",
+						"type": "string"
+					}
+				],
+				"name": "update",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/structs.sol": "todos"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/structs.sol": {
+			"keccak256": "0xcdbfcaecabe4b4a9245542020bfe1df962dcd9d3456acb4728efb6bc850874ea",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://81dd3595018f38fa8bffb05896c1b66b70b3d52f151f8e3ed282fe28852cb24f",
+				"dweb:/ipfs/QmRyi8KXxPSy7Q2rJ4NJLj4f5dD6qybzHSiogQ8MGHki4m"
+			]
+		}
+	},
+	"version": 1
+}
