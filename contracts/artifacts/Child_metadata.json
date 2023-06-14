@@ -6,29 +6,29 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"name": "foo",
-				"outputs": [
+				"inputs": [
 					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
+						"internalType": "uint256",
+						"name": "_newValue",
+						"type": "uint256"
 					}
 				],
-				"stateMutability": "pure",
+				"name": "setValue",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
 				"inputs": [],
-				"name": "foo1",
+				"name": "value",
 				"outputs": [
 					{
-						"internalType": "string",
+						"internalType": "uint256",
 						"name": "",
-						"type": "string"
+						"type": "uint256"
 					}
 				],
-				"stateMutability": "pure",
+				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -45,7 +45,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/inhritance2.sol": "b"
+			"contracts/inhritance2.sol": "Child"
 		},
 		"evmVersion": "paris",
 		"libraries": {},

@@ -27,9 +27,10 @@ contract functionuse{
  //important : Keep in mind that mappings cannot be passed as arguments to functions, but you can use them as local variables or return values within a function.
  
     //we can use array for input
-   uint[] public arr;
-    function arrayinput(uint[] memory _arr1) public {
-        arr.push(_arr1[0]);
+   uint[]  public arr=[23 , 4, 5];
+    function arrayinput(uint256 _value) public {
+        arr.push(_value);
+
     } //in this we need to define that we want [0] index value because value come in that form.
 
     //we can use array for output
@@ -39,8 +40,6 @@ contract functionuse{
     }
 
 }
-
-
     //call function with key-value input   
 
 contract xyz{
@@ -48,7 +47,7 @@ contract xyz{
     function somefunctionwithmanyinputs(uint x, uint y, uint z, address a, bool b, string memory c) public pure returns (uint){
     }
     //using value
-    function callfunc() public pure returns (uint){
+    function callfunc() external pure returns (uint){
         return somefunctionwithmanyinputs(3,4,2,0x5B38Da6a701c568545dCfcB03FcB875f56beddC4,true,"aman");
     }
     //using key

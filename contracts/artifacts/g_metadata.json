@@ -1,13 +1,13 @@
 {
 	"compiler": {
-		"version": "0.8.20+commit.a1b79de6"
+		"version": "0.8.18+commit.87f61d96"
 	},
 	"language": "Solidity",
 	"output": {
 		"abi": [
 			{
 				"inputs": [],
-				"name": "getname",
+				"name": "foo",
 				"outputs": [
 					{
 						"internalType": "string",
@@ -15,12 +15,12 @@
 						"type": "string"
 					}
 				],
-				"stateMutability": "view",
+				"stateMutability": "pure",
 				"type": "function"
 			},
 			{
 				"inputs": [],
-				"name": "name",
+				"name": "foo1",
 				"outputs": [
 					{
 						"internalType": "string",
@@ -28,20 +28,7 @@
 						"type": "string"
 					}
 				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "string",
-						"name": "_name",
-						"type": "string"
-					}
-				],
-				"name": "set",
-				"outputs": [],
-				"stateMutability": "nonpayable",
+				"stateMutability": "pure",
 				"type": "function"
 			}
 		],
@@ -58,9 +45,9 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/shadowingeffect.sol": "c"
+			"contracts/inhritance2.sol": "g"
 		},
-		"evmVersion": "shanghai",
+		"evmVersion": "paris",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -72,12 +59,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/shadowingeffect.sol": {
-			"keccak256": "0x72819b4178777567db9464054e6b0bf22b160a6561e67b734cd9ad2ac329abb0",
+		"contracts/inhritance2.sol": {
+			"keccak256": "0x61e6096094be87c3353b2a77b037b6c402b1540f3c7531aa5c52c89fcbd1967b",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://d2dcd7801e69bab110dee8928167dd585f239da31e69583a86bfb758e0dd7079",
-				"dweb:/ipfs/QmR5w3A6BpaD6GuASB7V5Yo9xFViTHm2uuoQvNXauUVivE"
+				"bzz-raw://751414036467a726dd7718a530b9e2d6cbddac0baf6a2dbecf30819061b8903a",
+				"dweb:/ipfs/QmZA9VBgAVyUfhjUsVhgiWkUPcBE72YRg6CYJTb1Zryz7d"
 			]
 		}
 	},

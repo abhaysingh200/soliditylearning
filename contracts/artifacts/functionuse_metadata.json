@@ -27,9 +27,9 @@
 			{
 				"inputs": [
 					{
-						"internalType": "uint256[]",
-						"name": "_arr1",
-						"type": "uint256[]"
+						"internalType": "uint256",
+						"name": "_value",
+						"type": "uint256"
 					}
 				],
 				"name": "arrayinput",
@@ -158,11 +158,11 @@
 	},
 	"sources": {
 		"contracts/function part2.sol": {
-			"keccak256": "0x19c8f136b057d34a56260d8993c6302844d7bed4dca93c7a8d9e7f7f67ce1513",
+			"keccak256": "0x155cd6e952721a1cb1576628d44b141f1895a6a299944a33dad88ff8919f5b07",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://4570338aaba69173bc553b6ce28df51776876dec9cb51fcc3ba5372083634ebd",
-				"dweb:/ipfs/QmTeyVWRkrABxegNaGSVdPmt7LcWErUQzNX4jf5aaJqbNm"
+				"bzz-raw://0622f83df5716e8eba93737e0605472fd4eada23bb49a9d9cf6cf3b77526d816",
+				"dweb:/ipfs/QmVkWxjkz7r1YKaUrDkNZqpeLP7vj7U1D7XEeM67hWaiEe"
 			]
 		}
 	},
