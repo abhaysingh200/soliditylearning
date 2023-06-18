@@ -6,34 +6,35 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"stateMutability": "nonpayable",
-				"type": "constructor"
-			},
-			{
-				"inputs": [],
-				"name": "name",
+				"inputs": [
+					{
+						"internalType": "contract icounter",
+						"name": "_counter",
+						"type": "address"
+					}
+				],
+				"name": "getCount",
 				"outputs": [
 					{
-						"internalType": "string",
+						"internalType": "uint256",
 						"name": "",
-						"type": "string"
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "text",
-				"outputs": [
+				"inputs": [
 					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
+						"internalType": "contract icounter",
+						"name": "_counter",
+						"type": "address"
 					}
 				],
-				"stateMutability": "view",
+				"name": "incrementCounter",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			}
 		],
@@ -50,7 +51,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/constructor.sol": "d"
+			"contracts/d.sol": "CounterManager"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -64,12 +65,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/constructor.sol": {
-			"keccak256": "0x1f045215385538db6a005418b73ab1a2a03ba801e7dec6a8df2a11fa25849958",
+		"contracts/d.sol": {
+			"keccak256": "0xc3c5933fd8fea1e9a19c78cae9fc573bf38c494fdc0f9ecb85f4fbe3175e2357",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://44dbf417567c727cd79997326ca6e9803b8350e3563601185d4ac03fae6fd174",
-				"dweb:/ipfs/QmQNhytBznPybuTptRBE8KZcyGrDZJEPdaxb3vMotDEnv8"
+				"bzz-raw://df0606bc6a9c4a6b23409b7f6804082f2dbc1b2860bf1fddf05031c5496ec648",
+				"dweb:/ipfs/QmYWbzkdCJGh2PVk16F4EQNCigf3S75bP5h7LeDJtvucLG"
 			]
 		}
 	},

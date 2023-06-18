@@ -7,30 +7,17 @@
 		"abi": [
 			{
 				"inputs": [],
-				"stateMutability": "nonpayable",
-				"type": "constructor"
-			},
-			{
-				"inputs": [],
-				"name": "name",
+				"name": "gettokenreserves",
 				"outputs": [
 					{
-						"internalType": "string",
+						"internalType": "uint256",
 						"name": "",
-						"type": "string"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "text",
-				"outputs": [
+						"type": "uint256"
+					},
 					{
-						"internalType": "string",
+						"internalType": "uint256",
 						"name": "",
-						"type": "string"
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -50,7 +37,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/constructor.sol": "d"
+			"contracts/interface.sol": "uinswapexample"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -64,12 +51,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/constructor.sol": {
-			"keccak256": "0x1f045215385538db6a005418b73ab1a2a03ba801e7dec6a8df2a11fa25849958",
+		"contracts/interface.sol": {
+			"keccak256": "0x380b6d6604a29a84e53a0efba74268f7cf2d3ec8143bef32b2ea8fcee0dbf5c9",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://44dbf417567c727cd79997326ca6e9803b8350e3563601185d4ac03fae6fd174",
-				"dweb:/ipfs/QmQNhytBznPybuTptRBE8KZcyGrDZJEPdaxb3vMotDEnv8"
+				"bzz-raw://9118892c0d504689ed1f7a1239552720a7ce25a8a454316d38498b641ff1a655",
+				"dweb:/ipfs/QmZ6t45kAq6dDBhV47Toz4iWVfCMxayXnjWAuQhcx7Khe2"
 			]
 		}
 	},
