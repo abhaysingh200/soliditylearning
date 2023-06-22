@@ -50,7 +50,7 @@
 		"gasEstimates": null,
 		"methodIdentifiers": {
 			"count()": "06661abd",
-			"increment()": "d09de08a"
+			"increment1()": "7b345b7a"
 		}
 	},
 	"abi": [
@@ -69,7 +69,7 @@
 		},
 		{
 			"inputs": [],
-			"name": "increment",
+			"name": "increment1",
 			"outputs": [],
 			"stateMutability": "nonpayable",
 			"type": "function"

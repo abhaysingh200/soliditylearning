@@ -22,11 +22,11 @@ contract counter{
     function getcount() external view returns (uint){
         return count;
     }
-}//its not matter what we write external or internal, this function also run on that place where he made.
+}
 
 interface icounter {
     function count() external view returns (uint);
-    function increment() external ;
+    function increment1() external ;
 // interface mean that if we give any contract address and he use this structure we can access the value and output of that contract address
 // The benefit of using interfaces is that they provide a way to interact with external contracts without knowing their internal implementation.
 // You only need to know the structure of the functions and variables you want to interact with.
@@ -39,8 +39,8 @@ interface icounter {
 
 
 contract mycontract{
-    function incrementcounter(icounter _counter) external{
-         (_counter).increment();
+    function incrementcounter(address _counter) external{
+     icounter(_counter).increment1();
     }//this means that we check this address fulfill the condition of icount increment function
     //if yes then return what he doing as counter increment function fulfill and return count +1,
     //so when we call this function count will increase by 1.

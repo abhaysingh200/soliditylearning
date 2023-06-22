@@ -23,17 +23,17 @@ receive()      fallback()
                
     */
 
-    event bottomlog(string text, address sender, uint value, bytes data );
+    event bottomlog(string text, address sender, uint value, bytes data,uint gas );
 
     //function to receive ether. msg.data must be empty
     receive() external payable {
-        //emit bottomlog("receive", msg.sender, msg.value, "");
-    }
+        emit bottomlog("receive", msg.sender, msg.value, "",gasleft());
+    }//their gas limit increase due to more data we add in emit
 
     //fallback function is called when msg.data is not empty
     fallback() external payable {
-        emit bottomlog("fallback", msg.sender, msg.value, msg.data);
-    }
+        emit bottomlog("fallback", msg.sender, msg.value, msg.data,gasleft());
+    }//their gas limit increase due to more data we add in emit so if you remove you can transfer ether.
 
     function getbalance() public view returns (uint){
         return address(this).balance;
