@@ -7,7 +7,7 @@
 		"abi": [
 			{
 				"inputs": [],
-				"name": "foo",
+				"name": "aman",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -15,7 +15,7 @@
 						"type": "uint256"
 					}
 				],
-				"stateMutability": "pure",
+				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -32,7 +32,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/Library.sol": "mycontract"
+			"contracts/lryd.sol": "anaa"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -46,12 +46,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/Library.sol": {
-			"keccak256": "0xff0fd002a3f32fceb06a85280a9c7d75e0ad13d3aa4120b2785a6412b40feef3",
+		"contracts/lryd.sol": {
+			"keccak256": "0xbb6240f03b2a280111b24a7a158c1335ea2de22899d677f87e5974b593849ee9",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://83238fa38051936dfd62b5cf9c6fba0854c2c5a2ef4b44068ad5142798aeb696",
-				"dweb:/ipfs/QmZ6DU9MNAkZyy4tAXsmEB3P8d4aPiWx1q4MneA4TyfDRR"
+				"bzz-raw://5738854ff3f88b35d5353a6d411a05ab69c25e2fa6389fc621e64e75d1bfefd2",
+				"dweb:/ipfs/QmWMZFLP1YazUqHnwSY917GDtc5DjJ1fxDXzsoEJQRjtpR"
 			]
 		}
 	},
