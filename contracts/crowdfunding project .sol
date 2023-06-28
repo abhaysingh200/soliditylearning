@@ -1,6 +1,10 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.13;
 
+//in this project we make a crowdfunding in which company can create their organization for funding(like charity, for hospital,etc.)
+//in which user can vote to their liked project and send amount in contract. After that those have more vote will get funding.
+
+
 contract crowdfundind{
     mapping (address=>uint)  public contributors;  //this create a gatter function, so it allow to give us our uint when we put address.
     address public manager;
@@ -44,14 +48,17 @@ contract crowdfundind{
     }
 
     function refund() public {
-        require(block.timestamp > deadline && raisedamount==target, "you are late");
+        require(block.timestamp > deadline && raisedamount<target, "you are late");
         require(contributors[msg.sender]>=100 wei ,"you are not contributors");
         //to give user address we need to assign that address paayable to set address in user.
         address payable user = payable (msg.sender);
         //when we use mapping it looks[ address : uint, address : uint] like this means assign value to address.
         //here we access that uint by address contributors[msg.sender] : uint] gives us uint.
         user.transfer(contributors[msg.sender]);
+        raisedamount -= contributors[msg.sender];
+        noofcontributors -=1;
         contributors[msg.sender]=0;
+
     }
 
     struct Request{
@@ -77,7 +84,7 @@ contract crowdfundind{
         //here we have access of structure of Request in usestruct.
         //we use requests mapping and right now numrequests value is 0, so assign usetruct data in requests[0],
         //that means now usestruct data fills in 0 number using mapping(uint=>Request);
-        Request memory usestruct = requests[numrequests];
+        Request storage usestruct = requests[numrequests];
         //then we increase the number, so when new create so value of numrequests is 1, then 2 and we gives this number to mapping.
         //why use these things: because we have used mapping, in which struct is stored.
         numrequests++;
@@ -90,7 +97,7 @@ contract crowdfundind{
 
     function voterequest(uint _requestNo) public  {
         require(contributors[msg.sender]>0 , "you must participate for voting");
-        require( _requestNo < numrequests);
+        require(_requestNo < numrequests);
         //its works like pointer thisrequest point the requests[2] like health, mean now we have access of that struct data.    
         Request storage thisrequest = requests[_requestNo];
         //here we check in thisrequest struct those who run this struct check voter[msg.sender] ==false, if yes then go next, if not then show error.        
@@ -101,13 +108,13 @@ contract crowdfundind{
   }
 
   function makepayment(uint _requestNo) public onlymanager{
-      require(raisedamount >=target);
+      require(block.timestamp >= deadline  && raisedamount >=target , "wait for time end or target not reached.");
       //in this we point that struct which manager say to give money.
       Request storage thisrequest = requests[_requestNo];
       //here we check voting is completed or not if not then go next.
       require(thisrequest.votingcompleted==false, "already completed");
       //here we check thisrequest(struct) noofvoter must be greater than half of total contributors(user).
-      require(thisrequest.noofvoters> noofcontributors/2,"majority not meets more thn 50% vote not for this");
+      require(thisrequest.noofvoters>= noofcontributors/2,"majority not meets more thn 50% vote not for this");
       //here we transfer money to receipient address with struct(thisrequest) value.
       thisrequest.receipient.transfer(thisrequest.value);
       thisrequest.votingcompleted=true;
