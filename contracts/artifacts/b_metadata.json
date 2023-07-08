@@ -7,12 +7,12 @@
 		"abi": [
 			{
 				"inputs": [],
-				"name": "name",
+				"name": "OWNER",
 				"outputs": [
 					{
-						"internalType": "uint256",
+						"internalType": "address",
 						"name": "",
-						"type": "uint256"
+						"type": "address"
 					}
 				],
 				"stateMutability": "view",
@@ -20,33 +20,67 @@
 			},
 			{
 				"inputs": [],
-				"name": "send",
+				"name": "fun1",
 				"outputs": [
 					{
-						"internalType": "address",
+						"internalType": "string",
 						"name": "",
-						"type": "address"
+						"type": "string"
 					}
 				],
-				"stateMutability": "view",
+				"stateMutability": "pure",
 				"type": "function"
 			},
 			{
-				"inputs": [
+				"inputs": [],
+				"name": "fun2",
+				"outputs": [
 					{
-						"internalType": "address",
-						"name": "_contractaddress",
-						"type": "address"
-					},
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "fun3",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "fun4",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "no",
+				"outputs": [
 					{
 						"internalType": "uint256",
-						"name": "_num",
+						"name": "",
 						"type": "uint256"
 					}
 				],
-				"name": "setvars1",
-				"outputs": [],
-				"stateMutability": "payable",
+				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -63,7 +97,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/delegatecall.sol": "b"
+			"contracts/inhritance.sol": "b"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -77,12 +111,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/delegatecall.sol": {
-			"keccak256": "0x2cc5b6506c3687b39b0cfd4755d8922f71af90b7ab5adc99b8ce496205a423c8",
+		"contracts/inhritance.sol": {
+			"keccak256": "0xec50d477b19f5139d7a9e8c9cf7bf314348eb8ea1ecf091bee78304e63ea4c27",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://5d12e31b7e0be1f8097f2570db92265c8c2d66bf7445b16823b02bcaa50a0953",
-				"dweb:/ipfs/QmYETZeekf1PwehxUTzp8GPLGhGK46pN6rw4goUooceHcL"
+				"bzz-raw://601bc8a778901c64350b19c452e93680e80462924d8ac7ca12697269f1a50d3c",
+				"dweb:/ipfs/QmbGn6sMJSnJEDbgTCbovMYvTfpcpyj2S25w6V63mS88MS"
 			]
 		}
 	},

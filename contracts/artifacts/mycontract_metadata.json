@@ -6,8 +6,14 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"name": "foo",
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_counter",
+						"type": "address"
+					}
+				],
+				"name": "getCount",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -15,7 +21,20 @@
 						"type": "uint256"
 					}
 				],
-				"stateMutability": "pure",
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_counter",
+						"type": "address"
+					}
+				],
+				"name": "incrementcounter",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			}
 		],
@@ -32,7 +51,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/Library.sol": "mycontract"
+			"contracts/interface.sol": "mycontract"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -46,12 +65,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/Library.sol": {
-			"keccak256": "0xff0fd002a3f32fceb06a85280a9c7d75e0ad13d3aa4120b2785a6412b40feef3",
+		"contracts/interface.sol": {
+			"keccak256": "0xa60a299ee7dc67a81ce751984ca7cce301b54e1c89575b47b8f7d25850f27b3f",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://83238fa38051936dfd62b5cf9c6fba0854c2c5a2ef4b44068ad5142798aeb696",
-				"dweb:/ipfs/QmZ6DU9MNAkZyy4tAXsmEB3P8d4aPiWx1q4MneA4TyfDRR"
+				"bzz-raw://bcae00263ecaf1153073acb1733ff81352a1782d2a9034d00e96aa3ddae1a84f",
+				"dweb:/ipfs/QmZU7X8TYZSBL9SCWazrthcweqWoQ7d4KeKePWZTR3iVQa"
 			]
 		}
 	},

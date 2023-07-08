@@ -117,25 +117,6 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "userAddress",
-						"type": "address"
-					}
-				],
-				"name": "getUserid",
-				"outputs": [
-					{
-						"internalType": "uint256[]",
-						"name": "",
-						"type": "uint256[]"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
 						"name": "",
 						"type": "address"
 					},
@@ -222,11 +203,11 @@
 	},
 	"sources": {
 		"contracts/lockedcrypto.sol": {
-			"keccak256": "0x686eb6442f4265752bfe17e8e9287e2ca20405555802f5fce4acd7a0161a8613",
+			"keccak256": "0x6911c2da96ae505180137f8d981399aad1ece499a636e01bcc1a628b2652c10e",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://a301bbe1a35504445d4d794253fa34431328f21275b9a368b0dfda9808966211",
-				"dweb:/ipfs/QmV49BpzpHcEWzSt5mTE6QUXN8yoEM3i2G9Fo9Tma5xFEj"
+				"bzz-raw://794a976235c84a13ed7a8b0252184d01550cb365bfea79663a0baf479577c7ba",
+				"dweb:/ipfs/QmUigP1FP3U9zvfSN2d1CmCoEZqZ2JjNyUBwe4iHidSrgk"
 			]
 		}
 	},

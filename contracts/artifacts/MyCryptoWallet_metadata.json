@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/createwallet.sol": "MyCryptoWallet"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/createwallet.sol": {
+			"keccak256": "0xf050a081ff6f0a95da6d25209417a3ca74b78c74bb47b9ba426ad6582cefbd62",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2ecbad03ad83855620dae5cb4ff2e2299e6e0882fbe507888177ac4bed622d12",
+				"dweb:/ipfs/QmZGMbScXB9v8kVqKuDfxPRAzbRiLjTSV6B9Z9ahcYMuQe"
+			]
+		}
+	},
+	"version": 1
+}

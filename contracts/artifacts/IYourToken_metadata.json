@@ -1,0 +1,83 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "recipient",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "transferFrom",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/createwallet.sol": "IYourToken"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/createwallet.sol": {
+			"keccak256": "0x38cc7536b08163c1e25d2f694a7f14dc7d715cd286f4d54c3b333e74ce742f37",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2b30d4d7b74c055d40ef84313feaf0b9568b611edc314eb2c97efb0028da6b1e",
+				"dweb:/ipfs/QmQjWTPUeS34izUFvMUX1EuYT9VTDbzxKNRFrEpAxeqPXS"
+			]
+		},
+		"contracts/erc20token.sol": {
+			"keccak256": "0x8b5ab8ca869e8a343dc9346908fc78b3df31ae8f32a689d1f49db61ea26c8ca3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://77e14dbbb91d77c20d3464c64e107fafe289595d0d4578d2f23a3a84bd95796c",
+				"dweb:/ipfs/QmYsEZWkkgr7vyx5ZrmpmLz75TCxfMgLiStSCjoYYY3FAs"
+			]
+		}
+	},
+	"version": 1
+}

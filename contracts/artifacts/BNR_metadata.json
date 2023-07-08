@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/createwallet.sol": "BNR"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/createwallet.sol": {
+			"keccak256": "0xcfb5ef1e4be0ec83bbf240e2a55b73efbc69f3efb33533b5d5b43afb4fba04c6",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://fc0c5813d6eb0437ddaf602ac95c1f35645f1953a138629ce59af579ca0fb428",
+				"dweb:/ipfs/QmQMjqjguyberUgVUmZe7FtbxRn6hQjV47YFE7QPkeTW3C"
+			]
+		}
+	},
+	"version": 1
+}

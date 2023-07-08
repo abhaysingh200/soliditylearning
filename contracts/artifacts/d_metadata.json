@@ -7,17 +7,12 @@
 		"abi": [
 			{
 				"inputs": [],
-				"stateMutability": "nonpayable",
-				"type": "constructor"
-			},
-			{
-				"inputs": [],
-				"name": "name",
+				"name": "OWNER",
 				"outputs": [
 					{
-						"internalType": "string",
+						"internalType": "address",
 						"name": "",
-						"type": "string"
+						"type": "address"
 					}
 				],
 				"stateMutability": "view",
@@ -25,7 +20,7 @@
 			},
 			{
 				"inputs": [],
-				"name": "text",
+				"name": "fun1",
 				"outputs": [
 					{
 						"internalType": "string",
@@ -33,7 +28,72 @@
 						"type": "string"
 					}
 				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "fun2",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "fun3",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "fun4",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "no",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_data",
+						"type": "uint256"
+					}
+				],
+				"name": "set",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			}
 		],
@@ -50,7 +110,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/constructor.sol": "d"
+			"contracts/inhritance.sol": "d"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -64,12 +124,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/constructor.sol": {
-			"keccak256": "0x1f045215385538db6a005418b73ab1a2a03ba801e7dec6a8df2a11fa25849958",
+		"contracts/inhritance.sol": {
+			"keccak256": "0xec50d477b19f5139d7a9e8c9cf7bf314348eb8ea1ecf091bee78304e63ea4c27",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://44dbf417567c727cd79997326ca6e9803b8350e3563601185d4ac03fae6fd174",
-				"dweb:/ipfs/QmQNhytBznPybuTptRBE8KZcyGrDZJEPdaxb3vMotDEnv8"
+				"bzz-raw://601bc8a778901c64350b19c452e93680e80462924d8ac7ca12697269f1a50d3c",
+				"dweb:/ipfs/QmbGn6sMJSnJEDbgTCbovMYvTfpcpyj2S25w6V63mS88MS"
 			]
 		}
 	},
