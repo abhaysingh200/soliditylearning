@@ -6,7 +6,7 @@ pragma solidity ^0.8.13;
 //note when we use delegate _targetcontract.delegate= its called the target(setvalue) to access, use this format
 //and modify the storage of caller state variable value. thats why updating the value in caller not in target.
 //the value will update in upper varibale like if value in on 2 no and on 1 is like uint256 public no then the value added in no.
-//thats why i place value on top then num(num have no usecase right now).
+//thats why I place value on top then num(num have no usecase right now).
 
 //call = operates within the context of the called contract and modifies its own storage.
 //when we use call _targetcontract.call = its called to target to access and also modify the target value,

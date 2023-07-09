@@ -17,13 +17,73 @@
 				"type": "constructor"
 			},
 			{
-				"inputs": [],
-				"name": "balance",
-				"outputs": [
+				"inputs": [
+					{
+						"internalType": "string[]",
+						"name": "name",
+						"type": "string[]"
+					},
+					{
+						"internalType": "address[]",
+						"name": "adr",
+						"type": "address[]"
+					}
+				],
+				"name": "addManagers",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address[]",
+						"name": "_adr",
+						"type": "address[]"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "airdrop",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					}
+				],
+				"name": "approve",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
 					{
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
+					}
+				],
+				"name": "managers",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "adr",
+						"type": "address"
 					}
 				],
 				"stateMutability": "view",
@@ -33,11 +93,21 @@
 				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "amount",
+						"name": "index1",
 						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "NewManager",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "Name",
+						"type": "string"
 					}
 				],
-				"name": "deposit",
+				"name": "resetmanager",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -54,43 +124,6 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"name": "tokenbalance",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
-					},
-					{
-						"internalType": "address",
-						"name": "to",
-						"type": "address"
-					}
-				],
-				"name": "withdraw",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -106,7 +139,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/createwallet.sol": "TokenWallet"
+			"contracts/mutlisignature.sol": "multisign"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -120,20 +153,20 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/createwallet.sol": {
-			"keccak256": "0xb347500419136dcc058d720e4f6dd6f6e4a4cf7c3b1dedf6e25d09a18061173c",
-			"license": "MIT",
-			"urls": [
-				"bzz-raw://f57ad1381d1e974cd9e4d595ad1f146d95b4d9b727f60c24d45e68f7edee2ca2",
-				"dweb:/ipfs/QmWJhaSMx4oWAf3dZbSA2rSeMRv6iysacEnFfUFn6BmyjC"
-			]
-		},
 		"contracts/erc20token.sol": {
 			"keccak256": "0x8c675f5479f08472e9bdb23d510bb6a41da772f261e510f53af777b65a26a3a4",
 			"license": "MIT",
 			"urls": [
 				"bzz-raw://26eeeedba0977737332af34a1124e209f50bb20335851be6c64853db0824fb3c",
 				"dweb:/ipfs/QmdUbv2RViJ9kENYodqhNgH3GfSRV9zuk6fa2hPnnUFs9u"
+			]
+		},
+		"contracts/mutlisignature.sol": {
+			"keccak256": "0xaa877ec95d409264b2c8310601f324bc652b9aa32d55c81c531676d783681f09",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://41dac979400c555340a4dd029886adb08aac01c732f2b67c8ab8ee4f77fdcb1d",
+				"dweb:/ipfs/Qma6baYjxPpHAuWjdo7NSZPYks8z3LScLvDLWoor9581wR"
 			]
 		}
 	},

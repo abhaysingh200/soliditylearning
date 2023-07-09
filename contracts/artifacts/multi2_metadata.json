@@ -6,44 +6,32 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"name": "num",
-				"outputs": [
+				"inputs": [
 					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
+						"internalType": "string[]",
+						"name": "_adr",
+						"type": "string[]"
 					}
 				],
-				"stateMutability": "view",
+				"name": "addr",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
 				"inputs": [
 					{
-						"internalType": "address",
-						"name": "_targetContract",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "_value",
-						"type": "uint256"
-					}
-				],
-				"name": "setValue",
-				"outputs": [],
-				"stateMutability": "payable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "value",
-				"outputs": [
-					{
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
+					}
+				],
+				"name": "addres",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
 					}
 				],
 				"stateMutability": "view",
@@ -63,7 +51,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/delegatecall.sol": "Caller"
+			"contracts/multisendether.sol": "multi2"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -77,12 +65,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/delegatecall.sol": {
-			"keccak256": "0xa71d189e797e3a1e828fde0ff182574521de38550fd4edb9691b54503c8503bb",
+		"contracts/multisendether.sol": {
+			"keccak256": "0x0063ccae5a46d1025ce1306f26623f92d312088273b4c81005ea8b559df6b439",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://4e2ada6ed87acafc1e1a4b15eec1debc505d7b767dca72f0cf349718e7f145a8",
-				"dweb:/ipfs/QmbjWZUbQsVQewdJo5gh34M6e6HM1ymQh2umAo2mqmeRgu"
+				"bzz-raw://6c3b8f49af982578bc405929f361cf52ee9cc5e921f561f86c76a175dea69ec0",
+				"dweb:/ipfs/QmU99aWro8zjovc1vbVi28bVGPakEcKr2NRA4bUc1Jxb4v"
 			]
 		}
 	},

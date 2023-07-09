@@ -46,3 +46,20 @@ contract multiSend{
     }
 
 }
+
+import "./erc20token.sol";
+contract multi {
+
+    Token public token;
+
+    constructor(address tokenAddress){
+       token =  Token(tokenAddress);
+    }
+
+    function airdrop(address[] memory _adr) public {
+        for (uint256 i = 0; i < _adr.length; i++){
+            token.transfer(_adr[i], 10);
+        }
+
+    }
+}

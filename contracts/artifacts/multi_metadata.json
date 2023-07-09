@@ -1,0 +1,86 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address[]",
+						"name": "_adr",
+						"type": "address[]"
+					}
+				],
+				"name": "addr",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "addres",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/multisendether.sol": "multi"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/erc20token.sol": {
+			"keccak256": "0x8c675f5479f08472e9bdb23d510bb6a41da772f261e510f53af777b65a26a3a4",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://26eeeedba0977737332af34a1124e209f50bb20335851be6c64853db0824fb3c",
+				"dweb:/ipfs/QmdUbv2RViJ9kENYodqhNgH3GfSRV9zuk6fa2hPnnUFs9u"
+			]
+		},
+		"contracts/multisendether.sol": {
+			"keccak256": "0x29691bdade214580a34a6dad9487883f4bd11909a31c4c0db0ff3fd9e9a349e8",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a580cd8514b0423ad976f6dae5395c0701b18fec1c5c9fe97ba2e8eb8c5c6563",
+				"dweb:/ipfs/QmTxHZQFXdjsbyiutkw5sB1MSNVhpYaxuzi6qkR8Urid5J"
+			]
+		}
+	},
+	"version": 1
+}
