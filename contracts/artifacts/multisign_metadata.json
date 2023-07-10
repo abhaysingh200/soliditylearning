@@ -19,6 +19,25 @@
 			{
 				"inputs": [
 					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "Approval",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
 						"internalType": "string[]",
 						"name": "name",
 						"type": "string[]"
@@ -162,11 +181,11 @@
 			]
 		},
 		"contracts/mutlisignature.sol": {
-			"keccak256": "0xaa877ec95d409264b2c8310601f324bc652b9aa32d55c81c531676d783681f09",
+			"keccak256": "0x3bb44540e4ee447a082be8b3891725f9fc4fe16fdd099890e68df495d27ca91c",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://41dac979400c555340a4dd029886adb08aac01c732f2b67c8ab8ee4f77fdcb1d",
-				"dweb:/ipfs/Qma6baYjxPpHAuWjdo7NSZPYks8z3LScLvDLWoor9581wR"
+				"bzz-raw://4b99bcc8a7067c735c254dc1b3c70ba5fc3cb22b9315fd7fa71cc24716f74e77",
+				"dweb:/ipfs/QmUbwRFALNEdfjkYZTLxCqmqvxHkg3mbUcWK797QqvzdhW"
 			]
 		}
 	},
