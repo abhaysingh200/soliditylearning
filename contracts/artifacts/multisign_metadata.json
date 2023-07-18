@@ -181,11 +181,11 @@
 			]
 		},
 		"contracts/mutlisignature.sol": {
-			"keccak256": "0x3bb44540e4ee447a082be8b3891725f9fc4fe16fdd099890e68df495d27ca91c",
+			"keccak256": "0xf5b09ce90b5ed285203d38b0ccb35145cedcba06ce9b1eaa206c1468e0bbd99c",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://4b99bcc8a7067c735c254dc1b3c70ba5fc3cb22b9315fd7fa71cc24716f74e77",
-				"dweb:/ipfs/QmUbwRFALNEdfjkYZTLxCqmqvxHkg3mbUcWK797QqvzdhW"
+				"bzz-raw://e85794afa09cb36f483af00ce69fabdb236930a9750d10ab71cb0f6de29bcaf8",
+				"dweb:/ipfs/QmbagvU8H16Ga1HDVKX79qsGp9qvVZtgaREK3mWsJfDGV9"
 			]
 		}
 	},

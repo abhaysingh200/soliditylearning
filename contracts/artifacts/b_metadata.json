@@ -7,20 +7,7 @@
 		"abi": [
 			{
 				"inputs": [],
-				"name": "OWNER",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "fun1",
+				"name": "checksuper",
 				"outputs": [
 					{
 						"internalType": "string",
@@ -33,7 +20,7 @@
 			},
 			{
 				"inputs": [],
-				"name": "fun2",
+				"name": "checksuper2",
 				"outputs": [
 					{
 						"internalType": "string",
@@ -46,7 +33,7 @@
 			},
 			{
 				"inputs": [],
-				"name": "fun3",
+				"name": "foo",
 				"outputs": [
 					{
 						"internalType": "string",
@@ -55,32 +42,6 @@
 					}
 				],
 				"stateMutability": "pure",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "fun4",
-				"outputs": [
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
-					}
-				],
-				"stateMutability": "pure",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "no",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -97,7 +58,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/inhritance.sol": "b"
+			"contracts/super.sol": "b"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -111,12 +72,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/inhritance.sol": {
-			"keccak256": "0xec50d477b19f5139d7a9e8c9cf7bf314348eb8ea1ecf091bee78304e63ea4c27",
+		"contracts/super.sol": {
+			"keccak256": "0x64a8357fc6bbfa8bb0dab6b55f737aef8844bbe79c4fa64e22831bd0737210e9",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://601bc8a778901c64350b19c452e93680e80462924d8ac7ca12697269f1a50d3c",
-				"dweb:/ipfs/QmbGn6sMJSnJEDbgTCbovMYvTfpcpyj2S25w6V63mS88MS"
+				"bzz-raw://fba7c711d7fd0d861553e683e76ae92f4420cd4d0228b97d3cb648fdbbe3692c",
+				"dweb:/ipfs/QmZZLy8gEwCimVSGEvbrioakBUMGm1RdX1NUx2bemsrVBN"
 			]
 		}
 	},

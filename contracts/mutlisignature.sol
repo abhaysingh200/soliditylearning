@@ -63,3 +63,92 @@ contract multisign{
         managers[index1].name = Name;
     }
 }
+
+contract MultiSigWallet{
+
+    address[] public owners;
+    uint public noOfConfirmationRequired;
+    mapping (address => bool) public IsOwner;
+    mapping (uint => mapping (address => bool)) public IsApproved;
+
+    constructor(address[] memory _owner, uint noOfConfirmation){
+        require(noOfConfirmation > 0);
+        noOfConfirmationRequired = noOfConfirmation;
+        require(noOfConfirmationRequired < _owner.length, "confirm must be less the owners length.");
+
+        for (uint i; i < _owner.length; i++){
+            address owner = _owner[i];   //this is gas optimization , using this no need to write _owner[i]
+            require(owner != address(0), "invalid owner");
+            require(! IsOwner[owner], "already become owner.");
+            owners.push(_owner[i]); //why push, because in array if we want to add value we need to use push.
+            IsOwner[_owner[i]] = true;
+        }
+    }
+
+    modifier OnlyOwner(){
+        require(IsOwner[msg.sender]);
+        _;
+    }
+
+    modifier txExists(uint index) {
+        require(index < transactions.length, "tx does not exist");
+        _;
+    }
+
+    modifier NotApprove(uint index) {
+        require(! IsApproved[index][msg.sender], "already approved");
+        _;
+    }
+
+    modifier NotExecute(uint index) {
+        require(! transactions[index].executed, "already executed.");
+        _;
+    }
+
+
+    struct Transaction{
+        address payable to;
+        uint amount ;
+        bool approved;
+        bool executed;
+        uint noOfConfirm;
+    }
+
+    Transaction[] public transactions;
+
+    receive() external payable {
+
+    }
+
+    function submitTransaction(address payable _to, uint _amount) public OnlyOwner{
+        transactions.push(Transaction({
+            to : _to,
+            amount : _amount,
+            approved : false,
+            executed : false,
+            noOfConfirm: 0
+        })
+      );
+    }
+
+    function ApproveTx(uint index) external OnlyOwner txExists(index) NotApprove(index){
+        require(! IsApproved[index][msg.sender], "owner already approved this.");
+        Transaction storage transaction  = transactions[index];
+        transaction.approved = true;
+        transaction.noOfConfirm += 1;
+        IsApproved[index][msg.sender] = true;
+    }
+
+    function execute(uint index) public OnlyOwner txExists(index) NotExecute(index){
+        Transaction storage transaction = transactions[index]; //why we not give executed data because transaction is struct he only store data in struct only.
+        require(transaction.noOfConfirm >= noOfConfirmationRequired, "more approve required.");
+        transaction.executed = true;
+        payable(transaction.to).transfer(transaction.amount);
+    }
+
+    function revokeConfirmation(uint index) public OnlyOwner txExists(index) NotExecute(index) {
+        Transaction storage transaction = transactions[index];
+        IsApproved[index][msg.sender] = false;
+        transaction.noOfConfirm -= 1;
+    }
+}

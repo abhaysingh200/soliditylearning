@@ -6,166 +6,18 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [
-					{
-						"internalType": "address[]",
-						"name": "_owners",
-						"type": "address[]"
-					},
-					{
-						"internalType": "uint256",
-						"name": "_numConfirmationRequired",
-						"type": "uint256"
-					}
-				],
+				"inputs": [],
 				"stateMutability": "nonpayable",
 				"type": "constructor"
 			},
 			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": false,
-						"internalType": "uint256",
-						"name": "transactionId",
-						"type": "uint256"
-					}
-				],
-				"name": "TransactionConfirmed",
-				"type": "event"
-			},
-			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": false,
-						"internalType": "uint256",
-						"name": "transactionId",
-						"type": "uint256"
-					},
-					{
-						"indexed": false,
-						"internalType": "address",
-						"name": "sender",
-						"type": "address"
-					},
-					{
-						"indexed": false,
-						"internalType": "address",
-						"name": "receiver",
-						"type": "address"
-					},
-					{
-						"indexed": false,
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
-					}
-				],
-				"name": "TransactionSubmitted",
-				"type": "event"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "_transactionId",
-						"type": "uint256"
-					}
-				],
-				"name": "confirmTransaction",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "transactionId",
-						"type": "uint256"
-					}
-				],
-				"name": "isTransactionConfirmed",
-				"outputs": [
-					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
 				"inputs": [],
-				"name": "numConfirmationRequired",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"name": "owners",
+				"name": "owner",
 				"outputs": [
 					{
 						"internalType": "address",
 						"name": "",
 						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "_to",
-						"type": "address"
-					}
-				],
-				"name": "submitTransaction",
-				"outputs": [],
-				"stateMutability": "payable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"name": "transactions",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "to",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "value",
-						"type": "uint256"
-					},
-					{
-						"internalType": "bool",
-						"name": "executed",
-						"type": "bool"
 					}
 				],
 				"stateMutability": "view",
@@ -185,7 +37,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/multi-signwallet.sol": "MultiSig"
+			"contracts/mutlisignature.sol": "MultiSig"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -199,12 +51,20 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/multi-signwallet.sol": {
-			"keccak256": "0xab247e1a87848ca451032458104c5ea9a2bc26cdb20b1334784b37ee5bab5854",
+		"contracts/erc20token.sol": {
+			"keccak256": "0x8c675f5479f08472e9bdb23d510bb6a41da772f261e510f53af777b65a26a3a4",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://78a742ff4b1bcdd8e32c775ffba0d45646698f162669085470bc862994f41178",
-				"dweb:/ipfs/QmTdz2oGF5QHfJTcApSknoDpk9ww3wkNxb9UeqGEkp8Jnd"
+				"bzz-raw://26eeeedba0977737332af34a1124e209f50bb20335851be6c64853db0824fb3c",
+				"dweb:/ipfs/QmdUbv2RViJ9kENYodqhNgH3GfSRV9zuk6fa2hPnnUFs9u"
+			]
+		},
+		"contracts/mutlisignature.sol": {
+			"keccak256": "0xccfbc36ff99162d131a77f01559f93084c5ea13f42b48d5ffe1b926998ebacfc",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://754bc1274ed814aefc3dc320f2c9757c0a50904c661739a39d97ce170a766079",
+				"dweb:/ipfs/QmegGLpTLiKAfXhD2GfyaKcje1vWhZ7StBVeBiPqMQeNAz"
 			]
 		}
 	},

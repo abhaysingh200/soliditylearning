@@ -9,12 +9,12 @@
 				"inputs": [
 					{
 						"internalType": "address[]",
-						"name": "_owners",
+						"name": "_owner",
 						"type": "address[]"
 					},
 					{
 						"internalType": "uint256",
-						"name": "_required",
+						"name": "noOfConfirmation",
 						"type": "uint256"
 					}
 				],
@@ -22,97 +22,14 @@
 				"type": "constructor"
 			},
 			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "owner",
-						"type": "address"
-					},
-					{
-						"indexed": true,
-						"internalType": "uint256",
-						"name": "txId",
-						"type": "uint256"
-					}
-				],
-				"name": "Approve",
-				"type": "event"
-			},
-			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "sender",
-						"type": "address"
-					},
-					{
-						"indexed": false,
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
-					}
-				],
-				"name": "Deposit",
-				"type": "event"
-			},
-			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": true,
-						"internalType": "uint256",
-						"name": "txId",
-						"type": "uint256"
-					}
-				],
-				"name": "Execute",
-				"type": "event"
-			},
-			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "owner",
-						"type": "address"
-					},
-					{
-						"indexed": true,
-						"internalType": "uint256",
-						"name": "txId",
-						"type": "uint256"
-					}
-				],
-				"name": "Revoke",
-				"type": "event"
-			},
-			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": true,
-						"internalType": "uint256",
-						"name": "txId",
-						"type": "uint256"
-					}
-				],
-				"name": "Submit",
-				"type": "event"
-			},
-			{
 				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "_txId",
+						"name": "index",
 						"type": "uint256"
 					}
 				],
-				"name": "approve",
+				"name": "ApproveTx",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -130,7 +47,26 @@
 						"type": "address"
 					}
 				],
-				"name": "approved",
+				"name": "IsApproved",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "IsOwner",
 				"outputs": [
 					{
 						"internalType": "bool",
@@ -145,29 +81,23 @@
 				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "_txId",
+						"name": "index",
 						"type": "uint256"
 					}
 				],
 				"name": "execute",
 				"outputs": [],
-				"stateMutability": "nonpayable",
+				"stateMutability": "payable",
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"name": "isOwner",
+				"inputs": [],
+				"name": "noOfConfirmationRequired",
 				"outputs": [
 					{
-						"internalType": "bool",
+						"internalType": "uint256",
 						"name": "",
-						"type": "bool"
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -193,27 +123,14 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "required",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
 				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "_txId",
+						"name": "index",
 						"type": "uint256"
 					}
 				],
-				"name": "revoke",
+				"name": "revokeConfirmation",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -221,22 +138,17 @@
 			{
 				"inputs": [
 					{
-						"internalType": "address",
+						"internalType": "address payable",
 						"name": "_to",
 						"type": "address"
 					},
 					{
 						"internalType": "uint256",
-						"name": "_value",
+						"name": "_amount",
 						"type": "uint256"
-					},
-					{
-						"internalType": "bytes",
-						"name": "_data",
-						"type": "bytes"
 					}
 				],
-				"name": "submit",
+				"name": "submitTransaction",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -252,24 +164,29 @@
 				"name": "transactions",
 				"outputs": [
 					{
-						"internalType": "address",
+						"internalType": "address payable",
 						"name": "to",
 						"type": "address"
 					},
 					{
 						"internalType": "uint256",
-						"name": "value",
+						"name": "amount",
 						"type": "uint256"
 					},
 					{
-						"internalType": "bytes",
-						"name": "data",
-						"type": "bytes"
+						"internalType": "bool",
+						"name": "approved",
+						"type": "bool"
 					},
 					{
 						"internalType": "bool",
 						"name": "executed",
 						"type": "bool"
+					},
+					{
+						"internalType": "uint256",
+						"name": "noOfConfirm",
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -293,7 +210,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/multi-signature2.sol": "MultiSigWallet"
+			"contracts/mutlisignature.sol": "MultiSigWallet"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -307,12 +224,20 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/multi-signature2.sol": {
-			"keccak256": "0x6615695363ed2feda81cb8957c681a67fad505a391a5aac50262d51ef325584f",
+		"contracts/erc20token.sol": {
+			"keccak256": "0x8c675f5479f08472e9bdb23d510bb6a41da772f261e510f53af777b65a26a3a4",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://3eaffb95311919966f1701040b895ea944cad66d451767d0558a0908c1e547dc",
-				"dweb:/ipfs/QmebeudjWE8D67qHYz2Xt4jehnkJoq32sQKbdwwF1Gjtpv"
+				"bzz-raw://26eeeedba0977737332af34a1124e209f50bb20335851be6c64853db0824fb3c",
+				"dweb:/ipfs/QmdUbv2RViJ9kENYodqhNgH3GfSRV9zuk6fa2hPnnUFs9u"
+			]
+		},
+		"contracts/mutlisignature.sol": {
+			"keccak256": "0xf5b09ce90b5ed285203d38b0ccb35145cedcba06ce9b1eaa206c1468e0bbd99c",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e85794afa09cb36f483af00ce69fabdb236930a9750d10ab71cb0f6de29bcaf8",
+				"dweb:/ipfs/QmbagvU8H16Ga1HDVKX79qsGp9qvVZtgaREK3mWsJfDGV9"
 			]
 		}
 	},

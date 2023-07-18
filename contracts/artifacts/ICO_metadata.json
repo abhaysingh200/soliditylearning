@@ -32,8 +32,14 @@
 			{
 				"inputs": [],
 				"name": "IcoStatus",
-				"outputs": [],
-				"stateMutability": "nonpayable",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -54,19 +60,6 @@
 				"name": "claimToken",
 				"outputs": [],
 				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "icoStatus",
-				"outputs": [
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
-					}
-				],
-				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -130,11 +123,11 @@
 	},
 	"sources": {
 		"contracts/ICO.sol": {
-			"keccak256": "0xd9b414d681c086040c668b558191679f9266c262d4a47fdb1e704c9b39ae0c81",
+			"keccak256": "0x3183d444423af4a9f82e1ecb6be5f2701747a08bc0f23d4a01f36a1d96141bbc",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://ef2a989ae5d6496c44e1fd57cdfe07cd059109007bd1e51bc140c3e9f6bbc62c",
-				"dweb:/ipfs/QmWh548PejZgsRoo3ZwZaHKeUanbQQDMHUMaru56AtPN44"
+				"bzz-raw://e71d2f8fec825387c002a33ab866481a494565e7649035f53bb0540cbd611315",
+				"dweb:/ipfs/QmaozpWpr8BBoz14FD47ee535cpLBXgqDm8V6n4f6ANJkS"
 			]
 		},
 		"contracts/erc20token.sol": {

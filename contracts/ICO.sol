@@ -7,7 +7,7 @@ contract ICO {
 
     Token public token;
     uint public avaiableToken = 1000;
-    string public icoStatus = "upcoming soon";
+    
     uint private startTime;
     uint private endTime;
     mapping (address buyer => uint token) public users;
@@ -18,11 +18,16 @@ contract ICO {
         endTime = startTime +  30 seconds ;
     }
 
-    function IcoStatus() public {
+    function IcoStatus() public view returns(string memory) {
+        if(block.timestamp <= startTime) {
+          return "upcoming soon";
+        }
         if (block.timestamp > startTime && block.timestamp < endTime){
-        icoStatus = "Star Now"; }
+          return "Star Now";
+        }
         else {
-        icoStatus = "End Now"; }
+          return "End Now"; 
+        }
     }
 
     function DepositEther() public payable returns(bool){
