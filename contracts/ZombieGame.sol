@@ -1,20 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^ 0.8.19;
 
-
-abstract contract ERC721 {
-  event Transfer(address indexed _from, address indexed _to, uint256 indexed _tokenId);
-  event Approval(address indexed _owner, address indexed _approved, uint256 indexed _tokenId);
-
-  function balanceOf(address _owner) external virtual  view returns (uint256);
-  function ownerOf(uint256 _tokenId) external virtual view returns (address);
-  function transferFrom(address _from, address  _to, uint256 _tokenId) external virtual payable;
-  function approve(address _approved, uint256  _tokenId) external virtual payable;
-}
-
-
-
-
 contract ZombieGame{
 
     mapping (uint => address) internal ZombieOwner;
@@ -66,6 +52,8 @@ contract FightZombies is ZombieGame {
 //using this function user can fight with random zombie who is exist, user need to give his zombie id by which he want to fight.
     function ZombieVsZombie(uint yourZombie) internal returns(string memory){
         uint enemyZombie = randomEnemy();
+        require(zombies[yourZombie].MatchLeft >= 1 , "Come after 24 hours.");
+        require(zombies[enemyZombie].MatchLeft >= 1, "Again Try");
 
     //this will check if our zombie level is more than enemy when we wins.
         if (zombies[yourZombie].level > zombies[enemyZombie].level) {
@@ -121,6 +109,7 @@ contract GetZombie is ZombieGame, FightZombies {
     mapping (uint => bool) public TakenNft;  //this will check nft is rented or still available.
     mapping (address => bool) public buyOnRent;  //this will check this address has nft on rent, 1 address alllow 1 nft only.
     mapping (uint => address) public RentedbyID; //using this we can check who have this id on rent.
+    mapping (uint => uint) public rentAmount; //tells us the price of rented id.
 
     modifier OnlyOwner(uint zombieId) {
         require(ZombieOwner[zombieId] == msg.sender, "Only Owner.");
@@ -135,20 +124,25 @@ contract GetZombie is ZombieGame, FightZombies {
     }
 
 //using this user can buy zombie, for that he need to type premium , then can give any name to him.
-    function BuyZombie(string memory plan, string memory name) public {
+    function BuyZombie(string memory plan, string memory name) public payable returns(bool) {
+        require(msg.value == 1 ether , "vlue must be 1 ether.");
         require(keccak256(bytes(plan)) == keccak256(bytes("premium")) || keccak256(bytes(plan)) == keccak256(bytes("Diamond")),"Correct Spelling");
         uint Dna = DnaGenerator(name);
         createZombie(plan, name, Dna, 5, 500, 0, 5, 0, 0);
+        return true;
     }
 
 //using this user can buy nft on rent.
-    function BuyOnRent(uint id) public {
+    function BuyOnRent(uint id) public payable returns(bool) {
+        require(msg.value == rentAmount[id], "amount not match ether required.");
         require(!TakenNft[id] && !buyOnRent[msg.sender], "already taken Nft.");
         require(ZombieOwner[id] != msg.sender, "owner cant take his own id.");
         require(onRent[id] == true, "nft not listed.");
+
         RentedbyID[id] = msg.sender;
         buyOnRent[msg.sender] = true;
         TakenNft[id] = true;
+        return true;
     }
 
 //using this user can see how many zombies he have.
@@ -165,19 +159,21 @@ contract GetZombie is ZombieGame, FightZombies {
         return OwnerZombiesId;
     }
 
+//using this we can finds all details of zombie like levels, matchleft ,etc.
     function getDetails(uint zombieId) public view returns(zombieDetails memory){
         return zombies[zombieId];    
     }
 
+//using this function user can enter hsi id and fight with random zombie id.
     function Fight(uint zombieID) public {
       
         if (RentedbyID[zombieID] == msg.sender || FreeNft[msg.sender] == true) {
             require(Timing[zombieID] > block.timestamp, "Now id is not on rent.");
-        uint beforeMatchWins = zombies[zombieID].Wins;
-        ZombieVsZombie(zombieID);
-        if (zombies[zombieID].Wins > beforeMatchWins && ZombieCount[msg.sender] >= 1) {
-        uint[] memory renterId = ownerZombies(msg.sender);
-        zombies[renterId[0]].level += 1;
+            uint beforeMatchWins = zombies[zombieID].Wins;
+            ZombieVsZombie(zombieID);
+                if (zombies[zombieID].Wins > beforeMatchWins && ZombieCount[msg.sender] >= 1) {
+                uint[] memory renterId = ownerZombies(msg.sender);
+                zombies[renterId[0]].level += 1;
             }
         }
 
@@ -187,13 +183,23 @@ contract GetZombie is ZombieGame, FightZombies {
         }
     }
 
-    function GiveOnRent(uint id) public OnlyOwner(id) {
+//using this user can convert his xp to level, when he win match he earn xp.
+    function convertXP(uint id) public OnlyOwner(id) {
+        require(zombies[id].xp >=500, "you need more xp");
+        zombies[id].xp -= 500;
+        zombies[id].level += 1;
+    }
+
+//using this user can give id on rent.
+    function GiveOnRent(uint id, uint RentAmount) public OnlyOwner(id) {
         require(!onRent[id]);
+        rentAmount[id] = RentAmount % (10 ** 18) ;
         onRent[id] = true;
         uint EndTime = block.timestamp + 30 seconds;
         Timing[id] = EndTime;
     }
 
+//using this user can remove id from rent only when time exaust.
     function RemoveRent(uint id) public OnlyOwner(id) {
         require(onRent[id] == true);
         require(block.timestamp >= Timing[id]);
@@ -202,11 +208,13 @@ contract GetZombie is ZombieGame, FightZombies {
         RentedbyID[id] = address(0);
     }
 
+//using this user can approve to any user to transfer his approved id.
     function approve(address to, uint id) public OnlyOwner(id) {
         Allowance[msg.sender][to] = id;
         Approve[msg.sender] = to;
     }
 
+//using this user can transfer zombie one to other.
     function tranferFrom(address from, address to, uint id) public OnlyOwner(id) {
         require(keccak256(bytes(zombies[id].plan)) == keccak256(bytes("premium")), "free nft can sell.");
         require(! onRent[id], "This nft on rent." );
@@ -214,7 +222,6 @@ contract GetZombie is ZombieGame, FightZombies {
         ZombieOwner[id] = to;
         ZombieCount[from]--;
         ZombieCount[to]++;
-
     }
 
 }
