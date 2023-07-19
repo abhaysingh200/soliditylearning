@@ -33,11 +33,11 @@
 	},
 	"sources": {
 		"contracts/ZombieGame.sol": {
-			"keccak256": "0xeb359ce422e39d1fa7f96c6cd37903ded5aac79fc5e636f1b6b8e4e4d0b6849e",
+			"keccak256": "0xa957e85c020f98433e3d54648662662c128300f2aa8fbe16a0f47ce04a0a9b29",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://bba0ed5e8673f6223b8eefcb633c2ebbc26679637146c87c2803f18bd16e392c",
-				"dweb:/ipfs/QmbMdtrYx5ziqGANnU9AgNsjdfQjQrHZGvcBwW2TxyzAmn"
+				"bzz-raw://083a628f7face9bf60085524368aa407f2722a88115b3612f905a5518799b750",
+				"dweb:/ipfs/QmdzqN1E3MAuA89smCRdq8mQmEeGLeuy7m5ajfvGcKszeK"
 			]
 		}
 	},
