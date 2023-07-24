@@ -181,11 +181,11 @@
 	},
 	"sources": {
 		"contracts/eventticket.sol": {
-			"keccak256": "0xa2f41ae2d2dec4424bebbb61bcf345d824c03f698a1e3c41fa0e07d408fc4a12",
+			"keccak256": "0xa9ae48b7390af2fe381326da916d350a0482ab2594621cf2e90a9a705ba4f961",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://11fe56c6dc487feb0efceda63db4b59ac83ebb5b5271260dbda8e8c3c63268e2",
-				"dweb:/ipfs/Qmf7pdFoUswrqwtTm31zZzdzV4Y9djU8dpC8SByW6yKHKw"
+				"bzz-raw://3b2103a8a2b6f410e3c683af06a0682015e7c2ae1fbe88e6d41e382a1397cb14",
+				"dweb:/ipfs/QmVhVhty3HhLzUyvXWC1VoUMGW8jJwekNmucP8fkvNST7o"
 			]
 		}
 	},

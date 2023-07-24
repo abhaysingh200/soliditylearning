@@ -6,42 +6,30 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"name": "checksuper",
-				"outputs": [
+				"anonymous": false,
+				"inputs": [
 					{
+						"indexed": false,
 						"internalType": "string",
-						"name": "",
+						"name": "message",
 						"type": "string"
 					}
 				],
-				"stateMutability": "pure",
-				"type": "function"
+				"name": "log",
+				"type": "event"
 			},
 			{
 				"inputs": [],
-				"name": "checksuper2",
-				"outputs": [
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
-					}
-				],
-				"stateMutability": "pure",
+				"name": "bar",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
 				"inputs": [],
 				"name": "foo",
-				"outputs": [
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
-					}
-				],
-				"stateMutability": "pure",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			}
 		],
@@ -58,7 +46,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/super.sol": "b"
+			"contracts/super2.sol": "b"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -72,12 +60,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/super.sol": {
-			"keccak256": "0x64a8357fc6bbfa8bb0dab6b55f737aef8844bbe79c4fa64e22831bd0737210e9",
+		"contracts/super2.sol": {
+			"keccak256": "0x808d2c9dfda4f2ce42c21cb7c74044bdda806d6835a58aaa29212cbe40d4cbf0",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://fba7c711d7fd0d861553e683e76ae92f4420cd4d0228b97d3cb648fdbbe3692c",
-				"dweb:/ipfs/QmZZLy8gEwCimVSGEvbrioakBUMGm1RdX1NUx2bemsrVBN"
+				"bzz-raw://847ec460ca8e0bb9e38354682e72ddb554acb17ceaa22360959cd0e263abe3f9",
+				"dweb:/ipfs/QmaU541F5GuEivQ8Fww7g9iWfsZrtrutEHoc5QfhbD5QRq"
 			]
 		}
 	},

@@ -11,7 +11,7 @@ contract eventticket{
     uint256 public timestamp;
     string public message="buy your ticket";
 
-    constructor (uint256 ticketpric){
+    constructor (uint256 ticketpric) {
         ticketprice= ticketpric;
         startat=block.timestamp;
         endat=block.timestamp + 7 days;

@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.20+commit.a1b79de6"
+		"version": "0.8.21+commit.d9974bed"
 	},
 	"language": "Solidity",
 	"output": {
@@ -33,11 +33,11 @@
 	},
 	"sources": {
 		"contracts/ZombieGame.sol": {
-			"keccak256": "0xb4b2ec8cb8ace468daa0dfad36a77f64e6577109c7912f3bdfbfba82684d26f7",
+			"keccak256": "0xbc7c4f90d20f95bffe35ef0d2c91682e34ad3bc825f40b91b4f31585b7c92eb5",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://92f9cc261e526243114d4c0e5bc1bb696625a1b6080ade91b3ba6994506be9f8",
-				"dweb:/ipfs/QmYijg5Q3iRBWFqtaizLzEQ6TLvKL1zSK7ETQtAzpoc2Hw"
+				"bzz-raw://7a911affeacc9c490387efd3127218c975dc2e1e03c32c438357d753fb151296",
+				"dweb:/ipfs/QmSZd6AFDZPQEyjFS9tff54iFuDuJ1dkYexoTvi5sUhs5V"
 			]
 		}
 	},
